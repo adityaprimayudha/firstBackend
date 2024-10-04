@@ -1,6 +1,7 @@
 import { application } from "express";
 import Auth from "./auth.js";
 
+application.use("/app/auth", Auth);
 const Router = (server) => {
   // home route with the get method and a handler
   server.get("/app", (req, res) => {
